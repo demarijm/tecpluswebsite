@@ -3,48 +3,527 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import Logos from '../components/Logos.astro';
 ---
 
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="">
+		<meta name="robots" content="nofollow,noindex">
+		<title>Tecplus, Digital Agency with a personal touch</title>
+		<link rel="icon" href="/assets/images/fav.png" sizes="32x32" />
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,500,600,700,700i,800,800i,900,900i" rel="stylesheet">
+		<link rel="stylesheet" href="/assets/css/swiper-bundle.min.css" rel="stylesheet" />
+		<link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+		<link href="/assets/css/style.css" rel="stylesheet">
+		<!-- Google tag (gtag.js) -->
+		<script is:inline async src="https://www.googletagmanager.com/gtag/js?id=AW-10797951229"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+		
+		  gtag('config', 'AW-10797951229');
+		</script>
+
+<!-- Event snippet for Website lead conversion page -->
+<script>
+	gtag('event', 'conversion', {'send_to': 'AW-10797951229/Rwu8CMeSnaoYEP3R7pwo'});
+  </script>
+  
+
 	</head>
-	<body>
-		<Header title={SITE_TITLE} />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/pages/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
-		</main>
+	<body class="">
+		<!-- Navigation Menu Start -->
+		<Header />
+		 <!-- Navigation Menu End -->
+		 <!-- Hero header Start -->
+		 <section class="hero w-full">
+	  <div class="container max-w-7xl">
+		 <div class="row">
+			<div class="col">
+			   <div class="hero-box d-flex align-items-center">
+				  <div class="hero-content mt-5">
+					 <h1 class="hero-title text-white">Digital Mastery Tailored for Professionals</h1>
+					 <p class="hero-subtitle fs-main text-white mt-3">
+						We help professional service firms and consultants generate more leads, increase sales, and grow their businesses.
+					 </p>
+					 <a href="#" class="btn btn-main px-3 mt-3">Get Started</a>
+				  </div>
+			   </div>
+			</div>
+		 </div>
+	  </div>
+   </section>
+   
+		 <!-- Hero Header End -->
+		 <!-- Brand Logos Start -->
+   			<Logos />
+		 
+		 <!-- Brand Logos End -->
+		 <!-- About Section Start -->
+		 <section class="video-section section">
+			<div class="container max-w-7xl px-3">
+			   <div class="row align-items-center">
+				  <div class="col-12 col-lg-6 mb-4 mb-lg-0">
+					 <div class="video-text pe-0 pe-lg-5">
+						<div class="section-head">
+						   <span class="pre-title small fw-bold text-uppercase">Our Story</span>
+						   <h2 class="section-title mt-2">
+						   The Journey of TecPlus</h2>
+						</div>
+						<div class="section-body fs-main mt-3 mt-lg-4">
+						   <p>Since 2006, TecPlus has been at the forefront of digital innovation, creating tailored digital solutions for professionals in various industries. Our commitment, passion, and personalized approach have defined our journey thus far. Discover more about our story and the people who make us TecPlus.
+						   </p>
+						   <a href="#" class="btn btn-main  px-3 px-3 mt-3">Discover More</a>
+						</div>
+					 </div>
+				  </div>
+				  <div class="col-12 col-lg-6 mt-5 mt-lg-0">
+					 <div class="video-embed about-video position-relative">
+						<div class="ratio ratio-16x9 rounded overflow-hidden">
+						   <iframe width="560" height="315" src="https://www.youtube.com/embed/YourVideoID" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						</div>
+					 </div>
+				  </div>
+			   </div>
+			</div>
+		 </section>
+		 
+		 <!-- About Section End -->
+		 <!-- Features Section Start -->
+		 <section class="features section">
+			<div class="container max-w-7xl px-3">
+			   <div class="row ">
+				  <div class="col ">
+					  <div class="section-head w-small">
+						  <span class="pre-title small fw-bold text-uppercase">TecPlus Solutions</span>
+						  <h2 class="section-title mt-2">
+						  The Power of Modern Technology</h2>
+						  <p class="section-subtitle mt-3 mt-lg-4">TecPlus is dedicated to delivering top-tier solutions for businesses across the globe. With our advanced technology, we've developed an array of services to help you navigate the digital world.</p>
+					  </div>
+				  </div>
+			  </div>
+			  
+			   <div class="row gx-5">
+				 <!-- Feature Box 1 Start -->
+				 <div class="col-12 col-sm-6 col-lg-3">
+				  <div class="feature-box mt-4 mt-lg-5">
+					  <div class="feature-box-icon d-inline-block position-relative">
+						  <img src="/assets/images/brain.svg">
+					  </div>
+					  <h3 class="feature-box-title mt-3">Advanced AI</h3>
+					  <p class="feature-box-text mt-3"> Our advanced AI system integrates seamlessly with your business to automate processes and increase productivity.</p>
+				  </div>
+			  </div>
+			  <!-- Feature Box 1 End -->
+			  <!-- Feature Box 2 Start -->
+			  <div class="col-12 col-sm-6 col-lg-3">
+				  <div class="feature-box mt-4 mt-lg-5">
+					  <div class="feature-box-icon d-inline-block position-relative">
+						  <img src="/assets/images/eye.svg">
+					  </div>
+					  <h3 class="feature-box-title mt-3">Insightful Analytics</h3>
+					  <p class="feature-box-text mt-3"> We provide comprehensive analytics and reports, giving you valuable insights for data-driven decision making.</p>
+				  </div>
+			  </div>
+			  <!-- Feature Box 2 End -->
+			  <!-- Feature Box 3 Start -->
+			  <div class="col-12 col-sm-6 col-lg-3">
+				  <div class="feature-box mt-4 mt-lg-5">
+					  <div class="feature-box-icon d-inline-block position-relative">
+						  <img src="/assets/images/pen.svg">
+					  </div>
+					  <h3 class="feature-box-title mt-3">Dynamic Copywriting</h3>
+					  <p class="feature-box-text mt-3"> Our experienced copywriting team creates captivating content that effectively communicates your brand's message.</p>
+				  </div>
+			  </div>
+			  <!-- Feature Box 3 End -->
+			  <!-- Feature Box 4 Start -->
+			  <div class="col-12 col-sm-6 col-lg-3">
+				  <div class="feature-box mt-4 mt-lg-5">
+					  <div class="feature-box-icon d-inline-block position-relative">
+						  <img src="/assets/images/dropper-dosage.svg">
+					  </div>
+					  <h3 class="feature-box-title mt-3">Distinct Branding</h3>
+					  <p class="feature-box-text mt-3"> We create unique, memorable branding that sets your business apart and resonates with your target audience.</p>
+				  </div>
+			  </div>
+   
+				  <!-- Feature Box 4 End -->
+				  <!-- Feature Box 5 Start -->
+   <div class="col-12 col-sm-6 col-lg-3">
+	  <div class="feature-box mt-4 mt-lg-5">
+		  <div class="feature-box-icon d-inline-block position-relative">
+			  <img src="/assets/images/startup-rocket.svg">
+		  </div>
+		  <h3 class="feature-box-title mt-3">Marketing Tools</h3>
+		  <p class="feature-box-text mt-3">Transform your marketing strategies with powerful tools that drive results.</p>
+	  </div>
+   </div>
+   <!-- Feature Box 5 End -->
+   <!-- Feature Box 6 Start -->
+   <div class="col-12 col-sm-6 col-lg-3">
+	  <div class="feature-box mt-4 mt-lg-5">
+		  <div class="feature-box-icon d-inline-block position-relative">
+			  <img src="/assets/images/photo-camera-photograph.svg">
+		  </div>
+		  <h3 class="feature-box-title mt-3">Creative</h3>
+		  <p class="feature-box-text mt-3">Unleash your creativity with visually stunning designs and captivating content.</p>
+	  </div>
+   </div>
+   <!-- Feature Box 6 End -->
+   <!-- Feature Box 7 Start -->
+   <div class="col-12 col-sm-6 col-lg-3">
+	  <div class="feature-box mt-4 mt-lg-5">
+		  <div class="feature-box-icon d-inline-block position-relative">
+			  <img src="/assets/images/pencil-case.svg">
+		  </div>
+		  <h3 class="feature-box-title mt-3">Toolkit</h3>
+		  <p class="feature-box-text mt-3">Equip yourself with a comprehensive toolkit to streamline your workflow.</p>
+	  </div>
+   </div>
+   <!-- Feature Box 7 End -->
+   <!-- Feature Box 8 Start -->
+   <div class="col-12 col-sm-6 col-lg-3">
+	  <div class="feature-box mt-4 mt-lg-5">
+		  <div class="feature-box-icon d-inline-block position-relative">
+			  <img src="/assets/images/browser-ui.svg">
+		  </div>
+		  <h3 class="feature-box-title mt-3">Docs</h3>
+		  <p class="feature-box-text mt-3">Access a library of helpful documentation for seamless implementation.</p>
+	  </div>
+   </div>
+   <!-- Feature Box 8 End -->
+			   </div>
+			</div>
+		 </section>
+		 <!-- Features Section End -->
+		 <!-- Content Sections  Start -->
+		 <!-- Content Section 1 Start -->
+		 <section class="content-section section">
+			<div class="container px-3">
+			  <div class="row flex-row-reverse align-items-center">
+				<div class="col-12 col-lg-6">
+				  <div class="content-img ps-0 ps-lg-5">
+					<div class="img-cover img-cover-right position-relative">
+					  <img class="img-fluid w-100 rounded" src="/assets/images/code.png">
+					</div>
+				  </div>
+				</div>
+				<div class="col-12 col-lg-6">
+				  <div class="content-text mt-5 mt-lg-0 pe-0 pe-lg-5">
+					<span class="pre-title small fw-bold text-uppercase">Tech</span>
+					<h3 class="section-title">Streamline Your Operations with User-Friendly <span class="highlight">Low Code</span> eCom Stores</h3>
+					<div class="fs-main">
+					  <p class="mt-4">Experience the convenience of easily operating your e-commerce stores with our intuitive low-code solutions. Our platform enables you to simplify complex processes, giving you more time to focus on growing your business. </p>
+					  <p class="mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet sagittis massa. Nulla hendrerit eu velit pellentesque accumsan. </p>
+					</div>
+					<a href="#" class="btn btn-main  px-3  mt-3">Learn More</a>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </section>
+		 <!-- Content Section 2 Start -->
+		 <section class="content-section section">
+			<div class="container px-3">
+			  <div class="row align-items-center">
+				<div class="col-12 col-lg-6">
+				  <div class="content-img pe-0 pe-lg-5">
+					<div class="img-cover img-cover-left position-relative">
+					  <img class="img-fluid w-100 rounded" src="/assets/images/insights.jpg">
+					</div>
+				  </div>
+				</div>
+				<div class="col-12 col-lg-6">
+				  <div class="content-text mt-5 mt-lg-0 ps-0 ps-lg-5">
+					<span class="pre-title small fw-bold text-uppercase">Analytics</span>
+					<h3 class="section-title">Unlock Actionable Insights to Analyze <span class="text-main">Sales Trends</span></h3>
+					<div class="fs-main">
+					  <p class="mt-4">Gain a deep understanding of your sales trends with our powerful analytics platform. Utilize comprehensive data analysis to uncover valuable insights into customer behavior, identify growth opportunities, and make informed business decisions.</p>
+					  <p class="mt-4">Stay ahead of the competition by harnessing the potential of data-driven insights, enabling you to drive revenue and achieve sustainable business growth.</p>
+					</div>
+					<a href="#" class="btn btn-main px-3 mt-3">Learn More</a>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </section>
+		 <!-- Content Section 3 Start -->
+		 <section class="content-section section">
+			<div class="container px-3">
+			  <div class="row flex-row-reverse align-items-center">
+				<div class="col-12 col-lg-6">
+				  <div class="content-img ps-0 ps-lg-5">
+					<div class="img-cover img-cover-right position-relative">
+					  <img class="img-fluid w-100 rounded" src="/assets/images/support.jpg">
+					</div>
+				  </div>
+				</div>
+				<div class="col-12 col-lg-6">
+				  <div class="content-text mt-5 mt-lg-0 pe-0 pe-lg-5">
+					<span class="pre-title small fw-bold text-uppercase">Support</span>
+					<h3 class="section-title">Reliable 24/7 Support Team Ready to Assist</h3>
+					<div class="fs-main">
+					  <p class="mt-4">Count on our dedicated support team to provide you with exceptional assistance around the clock. Whether you have technical queries or need guidance with our services, our knowledgeable team is here to ensure your needs are met promptly and effectively.</p>
+					  <p class="mt-4">We prioritize your satisfaction and are committed to delivering top-notch support that exceeds your expectations.</p>
+					</div>
+					<a href="#" class="btn btn-main px-3 mt-3">Learn More</a>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </section>
+		 <!-- Content Sections End  -->
+		 <!-- Case Studies Start -->
+	   
+   <section class="case-studies section">
+	  <div class="container px-3">
+		<div class="row align-items-center">
+		  <div class="col-12 col-lg-6">
+			<div class="case-studies-boxes d-block d-sm-flex position-relative">
+			  <div class="case-studies-col-1 px-0 px-sm-2">
+				<div class="case-study-box bg-white px-4 py-5 rounded">
+				  <img src="/assets/images/brand-logo-1.svg">
+				  <p class="mt-3 mb-0">Experience the success of our clients with our innovative solutions. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet sagittis massa.</p>
+				</div>
+				<div class="case-study-box bg-white px-4 py-5 mt-3 rounded">
+				  <img src="/assets/images/brand-logo-2.svg">
+				  <p class="mt-3 mb-0">Discover how we helped our clients achieve their goals and drive business growth. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet sagittis massa.</p>
+				</div>
+			  </div>
+			  <div class="case-studies-col-2 mt-3 mt-sm-5 px-0 px-sm-2">
+				<div class="case-study-box bg-white px-4 py-5 rounded">
+				  <img src="/assets/images/brand-logo-3.svg">
+				  <p class="mt-3 mb-0">Learn from real-world examples of successful implementations and the positive impact on our clients' businesses. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet sagittis massa.</p>
+				</div>
+				<div class="case-study-box bg-white px-4 py-5 mt-3 rounded">
+				  <img src="/assets/images/brand-logo-4.svg">
+				  <p class="mt-3 mb-0">See how our solutions have transformed businesses and provided measurable results. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet sagittis massa.</p>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  <div class="col-12 col-lg-6">
+			<div class="case-studies-content  mt-5 mt-lg-0 ps-0 ps-lg-5 ms-0 ms-lg-5 pt-4 pt-lg-0">
+			  <div class="section-head">
+				<span class="pre-title small fw-bold text-uppercase">Proof</span>
+				<h2 class="case-studies-title section-title">Case Studies</h2>
+			  </div>
+			  <div class="case-studies-text section-body fs-main">
+				<p class="text-dark mt-2"><strong>Real-world success stories showcasing the power of our solutions.</strong></p>
+				<p class="mt-3">Learn how our innovative approaches have led to significant business growth and improved outcomes for our clients. Discover the strategies, challenges, and results of our collaborative efforts.</p>
+				<ul class="list-unstyled case-studies-list mb-0">
+				  <li>Quisque vel pretium orci. Nunc non.</li>
+				  <li>Vestibulum maximus congue varius.</li>
+				  <li>Duis bibendum enim enim, et porta.</li>
+				  <li>Cras tincidunt condimentum odio.</li>
+				</ul>
+				<a href="#" class="btn btn-main px-3 mt-4">Get Started</a>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</section>
+		 <!-- Case Studies End -->
+		 <!-- Pricing Tables Start -->
+		
+		 <!-- Pricing Tables End -->
+		 <!-- Testimonials Start -->
+		 <section class="testimonials section">
+			<div class="container px-3">
+			   <div class="row">
+				  <div class="col">
+					 <div class="section-head text-center w-small mx-auto">
+						<span class="pre-title small fw-bold text-uppercase">Testimonials</span>
+						<h2 class="section-title">Our Clients</h2>
+						<p class="section-subtitle">Nulla hendrerit eu velit pellentesque accumsan.</p>
+					 </div>
+				  </div>
+			   </div>
+			   <div class="row mt-0 mt-lg-3">
+				  <div class="col-12">
+					 <div class="swiper-container testimonial-slider">
+						<div class="swiper-wrapper">
+						  <!-- Testimonial Slide 1 Start -->
+						   <div class="swiper-slide">
+							  <div class="testimonial-box d-flex mx-auto align-items-center position-relative my-3 my-lg-5">
+								 <div class="testimonial-img">
+									<img class="rounded" src="/assets/images/testimonial-1.jpg">
+								 </div>
+								 <div class="testimonial-text fs-main ps-0 ps-lg-5 mt-3 mt-lg-0">
+									<p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris varius eros massa, sit amet convallis enim semper sit amet. Etiam varius porta velit id sodales. Aliquam dictum augue non volutpat pharetra.</p>
+									<p class="testimonial-client mb-0 fw-bold text-dark mt-3">Mira Parker</p>
+									<span class="testimonial-company small text-muted mt-1">CEO, Pesky Panther</span>
+								 </div>
+							  </div>
+						   </div>
+						   <!-- Testimonial Slide 1 End -->
+						   <!-- Testimonial Slide 2 Start -->
+						   <div class="swiper-slide">
+							  <div class="testimonial-box d-flex mx-auto align-items-center position-relative my-3 my-lg-5">
+								 <div class="testimonial-img">
+									<img class="rounded" src="/assets/images/testimonial-2.jpg">
+								 </div>
+								 <div class="testimonial-text fs-main ps-0 ps-lg-5 mt-3 mt-lg-0">
+									<p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris varius eros massa, sit amet convallis enim semper sit amet. Etiam varius porta velit id sodales. Aliquam dictum augue non volutpat pharetra.</p>
+									<p class="testimonial-client mb-0 fw-bold text-dark mt-3">Sonny Vira</p>
+									<span class="testimonial-company small text-muted mt-1">Creative Director, Lazy Lizard</span>
+								 </div>
+							  </div>
+						   </div>
+						   <!-- Testimonial Slide 2 End -->
+						   <!-- Testimonial Slide 3 Start -->
+						   <div class="swiper-slide">
+							  <div class="testimonial-box d-flex mx-auto align-items-center position-relative my-3 my-lg-5">
+								 <div class="testimonial-img">
+									<img class="rounded" src="/assets/images/testimonial-3.jpg">
+								 </div>
+								 <div class="testimonial-text fs-main ps-0 ps-lg-5 mt-3 mt-lg-0">
+									<p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris varius eros massa, sit amet convallis enim semper sit amet. Etiam varius porta velit id sodales. Aliquam dictum augue non volutpat pharetra.</p>
+									<p class="testimonial-client mb-0 fw-bold text-dark mt-3">Lisa Limpy</p>
+									<span class="testimonial-company small text-muted mt-1">CTO, Lonely Forest</span>
+								 </div>
+							  </div>
+						   </div>
+						   <!-- Testimonial Slide 3 End -->
+						</div>
+						<div class="swiper-pagination"></div>
+					 </div>
+				  </div>
+			   </div>
+			</div>
+		 </section>
+		 <!-- Testimonials End -->
+		 <!-- Blog Posts Start -->
+		 <section class="blog-posts  section">
+			<div class="container max-w-7xl px-3">
+			<div class="row">
+			   <div class="col">
+				  <div class="section-head text-center w-small mx-auto">
+					 <span class="pre-title small fw-bold text-uppercase">Blog</span>
+					 <h2 class="section-title">Latest Articles</h2>
+					 <p class="section-subtitle">Nulla hendrerit eu velit pellentesque accumsan. Maecenas ac sem hendrerit, ultrices mauris.</p>
+				  </div>
+			   </div>
+			</div>
+			<div class="row">
+			  <!-- Blog Post 1 Start-->
+			   <div class="col-12 col-md-4 col-lg-4">
+				  <div class="blog-post-box mt-4 mt-lg-5">
+					 <div class="card border">
+						<img class="blog-thumb card-img-top" src="/assets/images/blog-1.jpg">
+						<div class="card-body p-3 p-lg-4">
+						   <div class="blog-cat">
+							  <a href="#" class="fw-bold text-uppercase small">SEO</a>
+						   </div>
+						   <h3 class="card-title fw-bold fs-5 mt-2 mb-0">How to fix your local SEO strategy to increase leads?</h3>
+						   <p class="card-text mt-2">Lorem ipsum dolor sit amet, consectetur elit. Nulla hendrerit eu velit pellentesque accuan.</p>
+						</div>
+						<div class="card-footer px-3 px-lg-4 bg-white">
+						   <div class="blog-meta d-flex align-items-center justify-content-between small">
+							  <div class="blog-author small">
+								 <img class="rounded-circle me-1" src="/assets/images/author.jpg">
+								 <span><a href="#" class="text-reset">Jamie Watson</a></span>
+							  </div>
+							  <div class="blog-date">
+								 <span>6 hrs ago</span>
+							  </div>
+						   </div>
+						</div>
+					 </div>
+				  </div>
+			   </div>
+			   <!-- Blog Post 1 End-->
+			   <!-- Blog Post 2 Start-->
+			   <div class="col-12 col-md-4 col-lg-4">
+				  <div class="blog-post-box mt-4 mt-lg-5">
+					 <div class="card border">
+						<img class="blog-thumb card-img-top" src="/assets/images/blog-2.jpg">
+						<div class="card-body p-3 p-lg-4">
+						   <div class="blog-cat">
+							  <a href="#" class="fw-bold text-uppercase small">Social Media</a>
+						   </div>
+						   <h3 class="card-title fw-bold fs-5 mt-2 mb-0">Scaling Facebook ads to tripple your ROI in one night?</h3>
+						   <p class="card-text mt-2">Lorem ipsum dolor sit amet, consectetur elit. Nulla hendrerit eu velit pellentesque accuan.</p>
+						</div>
+						<div class="card-footer px-3 px-lg-4 bg-white">
+						   <div class="blog-meta d-flex align-items-center justify-content-between small">
+							  <div class="blog-author small">
+								 <img class="rounded-circle me-1" src="/assets/images/author.jpg">
+								 <span><a href="#" class="text-reset">Jamie Watson</a></span>
+							  </div>
+							  <div class="blog-date">
+								 <span>3 days ago</span>
+							  </div>
+						   </div>
+						</div>
+					 </div>
+				  </div>
+			   </div>
+			   <!-- Blog Post 2 End -->
+			   <!-- Blog Post 3 Start-->
+			   <div class="col-12 col-md-4 col-lg-4">
+				  <div class="blog-post-box mt-4 mt-lg-5">
+					 <div class="card border">
+						<img class="blog-thumb card-img-top" src="/assets/images/blog-3.jpg">
+						<div class="card-body p-3 p-lg-4">
+						   <div class="blog-cat">
+							  <a href="#" class="fw-bold text-uppercase small">Marketing</a>
+						   </div>
+						   <h3 class="card-title fw-bold fs-5 mt-2 mb-0">100 cool methods of promoting new product or a startup?</h3>
+						   <p class="card-text mt-2">Lorem ipsum dolor sit amet, consectetur elit. Nulla hendrerit eu velit pellentesque accuan.</p>
+						</div>
+						<div class="card-footer px-3 px-lg-4 bg-white">
+						   <div class="blog-meta d-flex align-items-center justify-content-between small">
+							  <div class="blog-author small">
+								 <img class="rounded-circle me-1" src="/assets/images/author.jpg">
+								 <span><a href="#" class="text-reset">Jamie Watson</a></span>
+							  </div>
+							  <div class="blog-date">
+								 <span>1 week ago</span>
+							  </div>
+						   </div>
+						</div>
+					 </div>
+				  </div>
+			   </div>
+			   <!-- Blog Post 3 End -->
+			</div>
+		 </section>
+		 <!-- Blog Posts End -->
+		 <!-- Team Section Start -->
+	  
+		 <!-- Team Section End -->
+		 <!-- CTA Section Start -->
+		 <section class="cta section">
+			<div class="container max-w-7xl px-3">
+			   <div class="row">
+				  <div class="col">
+					 <div class="cta-box text-center">
+						<span class="pre-title small fw-bold text-uppercase">Get Started</span>
+						<h3 class="cta-title section-title"> Ready to amplify your online presence and stand out in the professional services sector? </h3>
+						<p class="cta-subtitle fs-main mt-3 mb-0">
+						  Let's get started! Contact TecPlus today to schedule a personalized, on-site consultation. It's time to transform your digital strategy, right from the comfort of your own office.
+						</p>
+						<a href="#" class="btn btn-main  px-3 mt-4">Get Started</a>
+					 </div>
+				  </div>
+			   </div>
+			</div>
+		 </section>
+		 <!-- CTA Section End -->
+		 <!-- Footer Start -->
 		<Footer />
-	</body>
+		 <!-- Footer End -->
+		 <script is:inline src="/assets/js/bootstrap.min.js"></script>
+		 <script is:inline src="/assets/js/swiper-bundle.min.js"></script>
+		 <script is:inline src="/assets/js/core.js"></script>
+	  </body>
 </html>

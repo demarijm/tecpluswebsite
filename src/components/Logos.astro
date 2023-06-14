@@ -1,0 +1,33 @@
+---
+const logos = [
+    { src: "https://povertypandemic.org/wp-content/uploads/2020/10/cropped-Untitled-design-68.png", alt: "Client Logo"},
+    { src: "https://www.thebizwizz.com/wp-content/uploads/2020/09/cropped-Add-a-heading-1-1.png", alt: "Client Logo"},
+    { src: "https://govintel.com/wp-content/uploads/2022/04/logo-vintel-1.png", alt: "Client Logo"},
+    { src: "https://govintel.com/wp-content/uploads/2022/04/logo-vintel-1.png", alt: "Client Logo"},
+    { src: "https://govintel.com/wp-content/uploads/2022/04/logo-vintel-1.png", alt: "Client Logo"},
+    { src: "https://govintel.com/wp-content/uploads/2022/04/logo-vintel-1.png", alt: "Client Logo"},
+
+]
+---
+
+<section class="brand-logos  section position-relative mx-auto pb-3 pb-lg-5">
+    <div class="  px-3">
+       <div class="row">
+          <div class="col">
+             <div class="brand-logos-box text-center">
+                <span class="pre-title small fw-bold text-uppercase">Clients</span>
+                <h3 class="brand-logos-title text-center  w-full h3 fw-bold mt-2">Proudly Serving Professionals Across Diverse Industries Since 2006</h3>
+                <div class=" justify-center w-full flex mt-4 pt-4">
+                    {logos.map((l, i) => {
+                        return (
+                            <img class="w-24 h-auto" src={l.src} alt={l.alt} />
+                        )
+
+                    } )}
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+ </section>
+
