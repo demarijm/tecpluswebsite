@@ -4,6 +4,54 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import Logos from '../components/Logos.astro';
+
+const solutions = [
+    {
+        "title": "Enterprise Web Development",
+        "description": "Our experienced team leverages modern frameworks like React and Next.js to deliver robust, scalable web applications tailored to meet your enterprise's unique needs.",
+        "targetAudience": "Enterprises, Government Entities"
+    },
+    {
+        "title": "AI and Machine Learning Solutions",
+        "description": "Harnessing the power of Python, we build AI-driven solutions, including machine learning models, data analytics tools, and predictive systems.",
+        "targetAudience": "Enterprises, Government Entities"
+    },
+    {
+        "title": "High Perfomance Distributed Backend Solutions",
+        "description": "We employ Golang's simplicity, efficiency, and strong support for concurrent programming to build powerful and scalable backend systems.",
+        "targetAudience": "Enterprises, Government Entities"
+    },
+    {
+        "title": "Mobile Application Development",
+        "description": "Utilizing React Native, we create feature-rich, cross-platform mobile applications that provide a seamless and engaging user experience.",
+        "targetAudience": "Enterprises, Government Entities"
+    },
+    {
+        "title": "CMS Integration",
+        "description": "We specialize in integrating and customizing powerful content management systems like WordPress and Sanity, empowering you to manage your digital content effectively.",
+        "targetAudience": "Enterprises, Government Entities"
+    },
+    {
+        "title": "Website Performance Optimization",
+        "description": "Our optimization solutions ensure your website or web app delivers a fast, smooth user experience, crucial for user satisfaction and conversion rates.",
+        "targetAudience": "Enterprises, Government Entities"
+    },
+    {
+        "title": "User Research & UX/UI Design",
+        "description": "We employ a user-centered approach, conducting detailed user research to inform our UX/UI design process, resulting in digital experiences that resonate with your audience.",
+        "targetAudience": "Enterprises, Government Entities"
+    },
+    {
+        "title": "Web Accessibility Solutions",
+        "description": "Our experts ensure your digital platforms are accessible to all users, complying with WCAG guidelines to enhance usability and meet legal requirements.",
+        "targetAudience": "Enterprises, Government Entities"
+    },
+    {
+        "title": "UX/UI Design Systems",
+        "description": "We build comprehensive design systems with Tailwind, enabling consistent, efficient, and scalable design across your digital products.",
+        "targetAudience": "Enterprises, Government Entities"
+    }
+]
 ---
 
 <!DOCTYPE html>
@@ -27,13 +75,13 @@ import Logos from '../components/Logos.astro';
 		  function gtag(){dataLayer.push(arguments);}
 		  gtag('js', new Date());
 		
-		  gtag('config', 'AW-10797951229');
+		  gtag('config', 'G-2TG65JW6JP');
 		</script>
 
 <!-- Event snippet for Website lead conversion page -->
-<script>
+<!-- <script>
 	gtag('event', 'conversion', {'send_to': 'AW-10797951229/Rwu8CMeSnaoYEP3R7pwo'});
-  </script>
+  </script> -->
   
 
 	</head>
@@ -41,24 +89,45 @@ import Logos from '../components/Logos.astro';
 		<!-- Navigation Menu Start -->
 		<Header />
 		 <!-- Navigation Menu End -->
-		 <!-- Hero header Start -->
-		 <section class="hero w-full">
-	  <div class="container max-w-7xl">
-		 <div class="row">
-			<div class="col">
-			   <div class="hero-box d-flex align-items-center">
-				  <div class="hero-content mt-5">
-					 <h1 class="hero-title text-white">Digital Mastery Tailored for Professionals</h1>
-					 <p class="hero-subtitle fs-main text-white mt-3">
-						We help professional service firms and consultants generate more leads, increase sales, and grow their businesses.
-					 </p>
-					 <a href="#" class="btn btn-main px-3 mt-3">Get Started</a>
+		 <div class="bg-white pb-24">
+			<div class="relative isolate overflow-hidden bg-gradient-to-b from-indigo-100/20">
+			  <div class="mx-auto max-w-7xl pb-24 pt-10  lg:grid lg:grid-cols-2 lg:gap-x-8 lg:px-8 ">
+				<div class="px-6 lg:px-0 lg:pt-4">
+				  <div class="mx-auto max-w-2xl">
+					<div class="max-w-lg">
+
+					  <div class="mt-24 sm:mt-32 lg:mt-16">
+						<a href="#" class="inline-flex space-x-6">
+						  <span class="rounded-full backdrop-blur-md bg-indigo-600/10 px-3 py-1 text-sm font-semibold leading-6 text-indigo-600 ring-1 ring-inset ring-indigo-600/10">What's new</span>
+						  <span class="inline-flex items-center space-x-2 text-sm font-medium leading-6 text-gray-600">
+							<span>Just shipped v0.1.0</span>
+							<svg class="h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+							  <path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd" />
+							</svg>
+						  </span>
+						</a>
+					  </div>
+					  <h1 class="mt-10 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">Transforming Visions into Powerful Realities</h1>
+					  <p class="mt-6 text-lg leading-8 text-gray-600">Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.</p>
+					  <div class="mt-10 flex items-center gap-x-6">
+						<a href="#" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Documentation</a>
+						<a href="#" class="text-sm font-semibold leading-6 text-gray-900">View on GitHub <span aria-hidden="true">→</span></a>
+					  </div>
+					</div>
 				  </div>
-			   </div>
+				</div>
+				<div class="mt-20  md:mx-auto md:max-w-2xl lg:mx-0 lg:mt-0 lg:w-screen">
+				  <div class="absolute inset-y-0 right-1/2 -z-10 -mr-10 w-[200%] skew-x-[-30deg] bg-white shadow-xl shadow-indigo-600/10 ring-1 ring-indigo-50 md:-mr-20 lg:-mr-36" aria-hidden="true"></div>
+				  <div class="">
+					<lottie-player src="https://assets9.lottiefiles.com/packages/lf20_myejiggj.json"  background="transparent"  speed="0.5"  style="width: 500px; height: 500px;"  loop  autoplay></lottie-player>
+				  </div>
+				</div>
+			  </div>
+			  <div class="absolute inset-x-0 bottom-0 -z-10 h-24 bg-gradient-to-t from-white sm:h-32"></div>
 			</div>
-		 </div>
-	  </div>
-   </section>
+		  </div>
+		  
+		
    
 		 <!-- Hero Header End -->
 		 <!-- Brand Logos Start -->
@@ -68,8 +137,18 @@ import Logos from '../components/Logos.astro';
 		 <!-- About Section Start -->
 		 <section class="video-section section">
 			<div class="container max-w-7xl px-3">
-			   <div class="row align-items-center">
-				  <div class="col-12 col-lg-6 mb-4 mb-lg-0">
+			   <div class="">
+				  <div class="grid grid-cols-2 ">
+					<div class="col-12 col-lg-6 mt-5 mt-lg-0">
+						<div class="video-embed w-full about-video position-relative">
+							<h1> Ask a question about your webiste</h1>
+							<input type="text" placeholder="Enter your question here" class="border w-full rounded-full py-2 px-2" />
+						   <div class="ratio ratio-16x9 rounded overflow-hidden">
+							
+						   </div>
+						</div>
+					 </div>
+					
 					 <div class="video-text pe-0 pe-lg-5">
 						<div class="section-head">
 						   <span class="pre-title small fw-bold text-uppercase">Our Story</span>
@@ -83,125 +162,27 @@ import Logos from '../components/Logos.astro';
 						</div>
 					 </div>
 				  </div>
-				  <div class="col-12 col-lg-6 mt-5 mt-lg-0">
-					 <div class="video-embed about-video position-relative">
-						<div class="ratio ratio-16x9 rounded overflow-hidden">
-						   <iframe width="560" height="315" src="https://www.youtube.com/embed/YourVideoID" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-						</div>
-					 </div>
-				  </div>
+				  
 			   </div>
 			</div>
 		 </section>
 		 
 		 <!-- About Section End -->
-		 <!-- Features Section Start -->
-		 <section class="features section">
-			<div class="container max-w-7xl px-3">
-			   <div class="row ">
-				  <div class="col ">
-					  <div class="section-head w-small">
-						  <span class="pre-title small fw-bold text-uppercase">TecPlus Solutions</span>
-						  <h2 class="section-title mt-2">
-						  The Power of Modern Technology</h2>
-						  <p class="section-subtitle mt-3 mt-lg-4">TecPlus is dedicated to delivering top-tier solutions for businesses across the globe. With our advanced technology, we've developed an array of services to help you navigate the digital world.</p>
-					  </div>
-				  </div>
-			  </div>
-			  
-			   <div class="row gx-5">
-				 <!-- Feature Box 1 Start -->
-				 <div class="col-12 col-sm-6 col-lg-3">
-				  <div class="feature-box mt-4 mt-lg-5">
-					  <div class="feature-box-icon d-inline-block position-relative">
-						  <img src="/assets/images/brain.svg">
-					  </div>
-					  <h3 class="feature-box-title mt-3">Advanced AI</h3>
-					  <p class="feature-box-text mt-3"> Our advanced AI system integrates seamlessly with your business to automate processes and increase productivity.</p>
-				  </div>
-			  </div>
-			  <!-- Feature Box 1 End -->
-			  <!-- Feature Box 2 Start -->
-			  <div class="col-12 col-sm-6 col-lg-3">
-				  <div class="feature-box mt-4 mt-lg-5">
-					  <div class="feature-box-icon d-inline-block position-relative">
-						  <img src="/assets/images/eye.svg">
-					  </div>
-					  <h3 class="feature-box-title mt-3">Insightful Analytics</h3>
-					  <p class="feature-box-text mt-3"> We provide comprehensive analytics and reports, giving you valuable insights for data-driven decision making.</p>
-				  </div>
-			  </div>
-			  <!-- Feature Box 2 End -->
-			  <!-- Feature Box 3 Start -->
-			  <div class="col-12 col-sm-6 col-lg-3">
-				  <div class="feature-box mt-4 mt-lg-5">
-					  <div class="feature-box-icon d-inline-block position-relative">
-						  <img src="/assets/images/pen.svg">
-					  </div>
-					  <h3 class="feature-box-title mt-3">Dynamic Copywriting</h3>
-					  <p class="feature-box-text mt-3"> Our experienced copywriting team creates captivating content that effectively communicates your brand's message.</p>
-				  </div>
-			  </div>
-			  <!-- Feature Box 3 End -->
-			  <!-- Feature Box 4 Start -->
-			  <div class="col-12 col-sm-6 col-lg-3">
-				  <div class="feature-box mt-4 mt-lg-5">
-					  <div class="feature-box-icon d-inline-block position-relative">
-						  <img src="/assets/images/dropper-dosage.svg">
-					  </div>
-					  <h3 class="feature-box-title mt-3">Distinct Branding</h3>
-					  <p class="feature-box-text mt-3"> We create unique, memorable branding that sets your business apart and resonates with your target audience.</p>
-				  </div>
-			  </div>
-   
-				  <!-- Feature Box 4 End -->
-				  <!-- Feature Box 5 Start -->
-   <div class="col-12 col-sm-6 col-lg-3">
-	  <div class="feature-box mt-4 mt-lg-5">
-		  <div class="feature-box-icon d-inline-block position-relative">
-			  <img src="/assets/images/startup-rocket.svg">
-		  </div>
-		  <h3 class="feature-box-title mt-3">Marketing Tools</h3>
-		  <p class="feature-box-text mt-3">Transform your marketing strategies with powerful tools that drive results.</p>
-	  </div>
-   </div>
-   <!-- Feature Box 5 End -->
-   <!-- Feature Box 6 Start -->
-   <div class="col-12 col-sm-6 col-lg-3">
-	  <div class="feature-box mt-4 mt-lg-5">
-		  <div class="feature-box-icon d-inline-block position-relative">
-			  <img src="/assets/images/photo-camera-photograph.svg">
-		  </div>
-		  <h3 class="feature-box-title mt-3">Creative</h3>
-		  <p class="feature-box-text mt-3">Unleash your creativity with visually stunning designs and captivating content.</p>
-	  </div>
-   </div>
-   <!-- Feature Box 6 End -->
-   <!-- Feature Box 7 Start -->
-   <div class="col-12 col-sm-6 col-lg-3">
-	  <div class="feature-box mt-4 mt-lg-5">
-		  <div class="feature-box-icon d-inline-block position-relative">
-			  <img src="/assets/images/pencil-case.svg">
-		  </div>
-		  <h3 class="feature-box-title mt-3">Toolkit</h3>
-		  <p class="feature-box-text mt-3">Equip yourself with a comprehensive toolkit to streamline your workflow.</p>
-	  </div>
-   </div>
-   <!-- Feature Box 7 End -->
-   <!-- Feature Box 8 Start -->
-   <div class="col-12 col-sm-6 col-lg-3">
-	  <div class="feature-box mt-4 mt-lg-5">
-		  <div class="feature-box-icon d-inline-block position-relative">
-			  <img src="/assets/images/browser-ui.svg">
-		  </div>
-		  <h3 class="feature-box-title mt-3">Docs</h3>
-		  <p class="feature-box-text mt-3">Access a library of helpful documentation for seamless implementation.</p>
-	  </div>
-   </div>
-   <!-- Feature Box 8 End -->
-			   </div>
+		 <div class="grid grid-cols-4 mx-auto max-w-7xl pb-24 pt-10 lg:gap-x-8 lg:px-8 ">
+			{solutions.map((solution) => (
+
+				<div class="feature-box mt-4 mt-lg-5">
+					<div class="feature-box-icon d-inline-block position-relative">
+						<img src="/assets/images/eye.svg">
+					</div>
+					<h3 class="feature-box-title mt-3">Insightful Analytics</h3>
+					<p class="feature-box-text mt-3"> We provide comprehensive analytics and reports, giving you valuable insights for data-driven decision making.</p>
+				</div>
 			</div>
-		 </section>
+				))}
+		 </div>
+		 <!-- Features Section Start -->
+		
 		 <!-- Features Section End -->
 		 <!-- Content Sections  Start -->
 		 <!-- Content Section 1 Start -->
@@ -526,4 +507,9 @@ import Logos from '../components/Logos.astro';
 		 <script is:inline src="/assets/js/swiper-bundle.min.js"></script>
 		 <script is:inline src="/assets/js/core.js"></script>
 	  </body>
+
+	  <script is:inline src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
 </html>
+
+
