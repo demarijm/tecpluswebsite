@@ -5,6 +5,11 @@ module.exports = {
 		extend: {
 			maxWidth: {
 				'8xl': '90rem',
+			},
+			colors: {
+				'primary': '#2929E6',
+				'secondary': '#EEFD40',
+				'tertiary': '#F4F4F5',
 			}
 		},
 	},
