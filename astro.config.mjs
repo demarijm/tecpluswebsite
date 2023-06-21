@@ -4,14 +4,21 @@ import sitemap from '@astrojs/sitemap';
 import tailwind from "@astrojs/tailwind";
 import vercel from '@astrojs/vercel/static';
 import alpinejs from "@astrojs/alpinejs";
-
+import { defineConfig } from "astro/config";
 import sanity from "astro-sanity";
 
 // https://astro.build/config
 export default defineConfig({
   site: 'https://cassyork.com',
-  integrations: [mdx(), sitemap(), tailwind(), alpinejs(), sanity()],
+  integrations: [mdx(), sitemap(), tailwind(), alpinejs(), sanity({
+    projectId: 'v4pnyecq',
+    dataset: 'production',
+    apiVersion: '2021-03-25',
+    useCdn: true,
+  })],
   adapter: vercel({
     analytics: true
   })
 });
+
+
