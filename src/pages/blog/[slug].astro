@@ -1,0 +1,157 @@
+---
+import type { Post } from '../../..';
+import BaseHead from '../../components/BaseHead.astro';
+import Footer from '../../components/Footer.astro';
+import Header from '../../components/Header.astro';
+import BlogPost from '../../layouts/BlogPost.astro';
+import { useSanityClient, groq } from 'astro-sanity';
+import { portableTextToHtml } from 'astro-sanity';
+import {toHTML} from '@portabletext/to-html'
+const { slug } = Astro.params;
+const query = groq`*[_type == "post" && slug.current == "${slug}"] {
+...,
+'authorName': author->name,
+'mainImageUrl': mainImage.asset->url,
+'categoryList': categories[]->title,
+}[0]`;
+const post = await useSanityClient().fetch(query);
+
+
+export async function getStaticPaths() {
+	const query = groq`*[_type == "post"] {
+		...,
+		'authorName': author->name,
+		'mainImageUrl': mainImage.asset->url,
+		'categoryList': categories[]->title,
+	}`;
+	const posts = await useSanityClient().fetch(query);
+	// const posts = await getCollection('blog');
+
+	
+	
+	return posts.map((post: Post) => ({
+		params: { slug: post.slug.current },
+		props: post,
+	})
+
+	
+	);
+}
+// }
+// type Props = CollectionEntry<'blog'>;
+
+// const { Content } = await post.render();
+const {
+	title,
+	description,
+	mainImageUrl,
+} = post;
+
+---
+
+
+<html lang="en">
+	<head>
+		<BaseHead title={title} description={description} />
+		<style>
+			.title {
+				font-size: 2em;
+				margin: 0.25em 0 0;
+			}
+			hr {
+				border-top: 1px solid #ddd;
+				margin: 1rem 0;
+			}
+			.last-updated-on {
+				font-style: italic;
+			}
+		</style>
+		
+	</head>
+
+	<body>
+		<Header />
+		<main>
+			<article class="mx-auto max-w-7xl sm:px-6 lg:px-8">
+				<!-- Content goes here -->
+
+			  
+				<div class="flex justify-center md:py-12">
+					
+					
+					{mainImageUrl && <img class="rounded-lg py-4 max-w-md" width={1200} height={360} src={mainImageUrl} alt="" />}
+				</div>
+
+				<div class="grid relative grid-cols-12">
+				<div class="hidden  rounded-lg  col-span-3 sticky top-24   lg:flex ">
+						<div class="">
+							<div class="rounded-lg bg-black flex flex-col gap-4 border p-4">
+								<h4 class="text-2xl text-white font-semibold">
+									Want to learn more?
+								</h4>
+								<p class="text-white/80">
+									Take one of our free courses and learn how to build more secure and performant applications.
+									</p>
+									<button class="px-3 py-2 bg-blue-500 text-white rounded-md">
+										Click Me
+									</button>
+
+							</div>
+
+						</div>
+					</div>
+					<div class="bg-white pt-6 col-span-12 sm:col-span-9 px-6 pb-32 lg:px-8">
+						<h1 class="mt-2 py-4 text-3xl font-bold tracking-tight text-black sm:text-4xl">{title}</h1>
+						<div class="mx-auto sm:max-w-3xl text-base leading-7 text-gray-700">
+							
+							
+							<!-- <FormattedDate date={pubDate} />
+							{
+								updatedDate && (
+									<div class="last-updated-on">
+										Last updated on <FormattedDate date={updatedDate} />
+										</div>
+										)
+									} -->
+	
+	
+										<div class="prose" set:html={toHTML(post.body)} />
+						</div>
+					  </div>
+				</div>
+				  
+				
+			</article>
+			<div class="bg-white">
+				<div class="mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:px-8">
+				  <div class="relative isolate overflow-hidden bg-gray-900 px-6 py-24 text-center shadow-2xl sm:rounded-3xl sm:px-16">
+					<h2 class="mx-auto max-w-2xl text-3xl font-bold tracking-tight text-white sm:text-4xl">Boost your productivity.</h2>
+					<p class="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">Incididunt sint fugiat pariatur cupidatat consectetur sit cillum anim id veniam aliqua proident excepteur commodo do ea.</p>
+					<div class="mt-10 flex items-center justify-center gap-x-6">
+					  <a href="#" class="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Get started</a>
+					  <a href="#" class="text-sm font-semibold leading-6 text-white">Learn more <span aria-hidden="true">→</span></a>
+					</div>
+					<svg viewBox="0 0 1024 1024" class="absolute left-1/2 top-1/2 -z-10 h-[64rem] w-[64rem] -translate-x-1/2 [mask-image:radial-gradient(closest-side,white,transparent)]" aria-hidden="true">
+					  <circle cx="512" cy="512" r="512" fill="url(#827591b1-ce8c-4110-b064-7cb85a0b1217)" fill-opacity="0.7" />
+					  <defs>
+						<radialGradient id="827591b1-ce8c-4110-b064-7cb85a0b1217">
+						  <stop stop-color="#7775D6" />
+						  <stop offset="1" stop-color="#E935C1" />
+						</radialGradient>
+					  </defs>
+					</svg>
+				  </div>
+				</div>
+			  </div>
+			  
+		</main>
+		<Footer />
+	<script is:inline>
+		const aside = document.querySelector('aside');
+		aside.classList.add('bg-gray-300');
+	
+	</script>
+	</body>
+</html>
+
+

@@ -4,7 +4,6 @@ import sitemap from '@astrojs/sitemap';
 import tailwind from "@astrojs/tailwind";
 import vercel from '@astrojs/vercel/static';
 import alpinejs from "@astrojs/alpinejs";
-import { defineConfig } from "astro/config";
 import sanity from "astro-sanity";
 
 // https://astro.build/config
