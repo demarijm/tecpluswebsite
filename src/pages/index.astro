@@ -99,14 +99,14 @@ const featured = [
 		<!-- Navigation Menu Start -->
 		<Header />
 		 <!-- Navigation Menu End -->
-		 <section class="bg-black py-24">
+		 <section class="bg-black py-10 lg:py-24">
 			<div class="relative isolate overflow-clip ">
-			  <div class="mx-auto max-w-8xl    lg:grid lg:grid-cols-2 lg:gap-x-8 lg:px-8 ">
+			  <div class="mx-auto max-w-8xl lg:grid lg:grid-cols-2 lg:gap-x-8 lg:px-8 ">
 				<div class="px-6 lg:px-0 lg:pt-4">
 				  <div class="mx-auto max-w-2xl">
 					<div class="max-w-2xl">
 
-					  <div class="pt-24 sm:mp-32 lg:pt-16">
+					  <div class="pt-12 sm:mp-32 lg:pt-16">
 						<a href="#" class="inline-flex space-x-6">
 						 
 						  <span class="inline-flex items-center space-x-2 text-lg font-bold leading-6 text-secondary ">
@@ -117,7 +117,8 @@ const featured = [
 						  </span>
 						</a>
 					  </div>
-					  <h1 class="mt-10 text-5xl font-bold tracking-tight text-white sm:text-6xl">Transforming <span class="gradient-1">Visions</span> into Powerful <span class="gradient-2">Realities</span></h1>
+					  <h1 class="mt-10 hidden text-6xl text-center md:text-left font-bold tracking-tight text-white  sm:text-6xl">Transforming <span class="gradient-1">Visions</span> into Powerful <span class="gradient-2">Realities</span></h1>
+					  <h1 class="mt-10 md:hidden text-7xl text-center  font-bold tracking-tight text-white ">Transforming Visions into Powerful <span class="gradient-2">Realities</span></h1>
 					  <p class="mt-6 text-lg leading-8 text-white">
 						We bring a new level experience in software design. Combining new technologies and mature practice to achieve enterprise ready results in
 						a fraction of the time. 
@@ -157,8 +158,23 @@ With recognition of our work in UX/UI, product development, and API platform dev
 		 <section class=" bg-white mx-auto max-w-8xl py-24 sm:px-6 lg:px-8">
 			<div class="container max-w-8xl px-3">
 			   <div class="">
-				  <div class="grid grid-cols-2 gap-12 ">
-					<div class="col-12 col-lg-6 mt-5 mt-lg-0">
+				  <div class="grid sm:grid-cols-2 gap-12 ">
+					
+            <div class="video-text pe-0 pe-lg-5">
+              <div class="section-head">
+                 <span class="pre-title small fw-bold text-uppercase">Our Story</span>
+                 <h2 class="text-5xl text-black font-bold">
+                 The Journey of TecPlus</h2>
+              </div>
+              <div class="text-black  mt-3 lg:mt-4 leading-8">
+                 <p>Since 2006, TecPlus has been at the forefront of digital innovation, creating tailored digital solutions for professionals in various industries. Our commitment, passion, and personalized approach have defined our journey thus far. Discover more about our story and the people who make us TecPlus.
+                 </p>
+                 <br/>
+                 <Button size="lg" />
+              </div>
+             </div>
+          
+            <div class="col-12 col-lg-6 mt-5 mt-lg-0">
 						<div class="video-embed w-full about-video position-relative">
 							<h1> Ask a question about your webiste</h1>
 							<input type="text" placeholder="Enter your question here" class="border w-full rounded-full py-2 px-2" />
@@ -166,19 +182,7 @@ With recognition of our work in UX/UI, product development, and API platform dev
 						</div>
 					 </div>
 					
-					 <div class="video-text pe-0 pe-lg-5">
-						<div class="section-head">
-						   <span class="pre-title small fw-bold text-uppercase">Our Story</span>
-						   <h2 class="text-5xl text-black font-bold">
-						   The Journey of TecPlus</h2>
-						</div>
-						<div class="text-black  mt-3 lg:mt-4 leading-8">
-						   <p>Since 2006, TecPlus has been at the forefront of digital innovation, creating tailored digital solutions for professionals in various industries. Our commitment, passion, and personalized approach have defined our journey thus far. Discover more about our story and the people who make us TecPlus.
-						   </p>
-						   <br/>
-						   <Button size="lg" />
-						</div>
-					 </div>
+				
 				  </div>
 				  
 			   </div>
@@ -188,7 +192,7 @@ With recognition of our work in UX/UI, product development, and API platform dev
 		 <!-- About Section End -->
 		 <section class="bg-tertiary w-full">
 
-		 <div class="grid grid-cols-4 gap-12 bg-tertiary mx-auto max-w-8xl pb-24 pt-10 lg:gap-x-8 lg:px-8">
+		 <div class="grid sm:grid-cols-2 lg:grid-cols-4 px-4 gap-12 bg-tertiary mx-auto max-w-8xl pb-24 pt-10 lg:gap-x-8 lg:px-8">
 			{solutions.map((solution) => (
 
 				<div class="feature-box mt-4 mt-lg-5">
@@ -208,9 +212,13 @@ With recognition of our work in UX/UI, product development, and API platform dev
     <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start">
       <div class="lg:pr-4 lg:pt-4">
         <div class="lg:max-w-lg">
-          <h2 class="text-base font-semibold leading-7 text-indigo-600">Deploy faster</h2>
-          <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">A better workflow</p>
-          <p class="mt-6 text-lg leading-8 text-gray-600">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.</p>
+          <h2 class="text-base font-semibold leading-7 text-indigo-600">Get ideas off the ground faster</h2>
+          <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              From MVP to Production
+            </p>
+          <p class="mt-6 text-lg leading-8 text-gray-600">
+              We take care of the journey from MVP to production in your application. If your tech team is too busy we take care of the rest.
+            </p>
           <div class="mt-8">
             <a href="#" class="inline-flex rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Get started</a>
           </div>
@@ -220,7 +228,7 @@ With recognition of our work in UX/UI, product development, and API platform dev
             </blockquote>
             <figcaption class="mt-6 flex gap-x-4 text-sm leading-6">
               <img src="https://images.unsplash.com/photo-1509783236416-c9ad59bae472?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80" alt="" class="h-6 w-6 flex-none rounded-full">
-              <div><span class="font-semibold text-gray-900">Maria Hill</span> – Marketing Manager</div>
+              <div><span class="font-semibold text-gray-900">Maria Hill</span>  Marketing Manager</div>
             </figcaption>
           </figure>
         </div>
@@ -236,7 +244,7 @@ With recognition of our work in UX/UI, product development, and API platform dev
     <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
       <div>
         <h2 class="text-base font-semibold leading-7 text-indigo-600">Everything you need</h2>
-        <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">All-in-one platform</p>
+        <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Product lead growth</p>
         <p class="mt-6 text-base leading-7 text-gray-600">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.</p>
       </div>
       <dl class="col-span-2 grid grid-cols-1 gap-x-8 gap-y-10 text-base leading-7 text-gray-600 sm:grid-cols-2 lg:gap-y-16">
@@ -341,9 +349,11 @@ With recognition of our work in UX/UI, product development, and API platform dev
 
 			<Footer />
 
-			<script is:inline src="/assets/js/swiper-bundle.min.js"></script>
-			<script is:inline src="/assets/js/core.js"></script>
 			<script is:inline src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+      <script is:inline>
+        const 
+        </script>
+        
 	  </body>
 	  
 	  
